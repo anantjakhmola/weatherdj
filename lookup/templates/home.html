@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+
+{% block content %}
+
+
+<br>
+{% if zipcode %}
+    {{zipcode}}
+{% endif %}
+
+
+{% if api %}
+    {% if api == "Error..."%}
+        There is an error, please try again...
+    {% else %}
+    <div class="jumbotron {{category_color}}">
+        <h1 class="display-4">Category: {{api.0.IconPhrase}} <br/> 
+        </h1>
+        <p class="lead">Temperatures: {{api.0.Temperature.Value}} {{api.0.Temperature.Unit}} <br/> Wind Speed: {{api.0.Wind.Speed.Value}} {{api.0.Wind.Speed.Unit}} <br/> UVIndex: {{api.0.UVIndex}} <br/></p>
+        
+        <p> {{category_description}} </p>
+    </div>
+    {%endif%}
+
+{% endif %}
+{% endblock %}

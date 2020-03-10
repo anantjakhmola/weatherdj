@@ -26,7 +26,7 @@ SECRET_KEY = 'xv@p*-#n209k^!)7o($hi@9vs5uw6=1wt6r^64=gq8^0^n=xb#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['calm-inlet-60238.herokuapp.com']
 
 
 # Application definition
